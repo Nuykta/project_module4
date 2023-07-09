@@ -21,3 +21,8 @@ img {
  width: 100%;
  height: auto;
 }
+.paragraph-4 {
+    font-size: 24px;
+    text-shadow: green 0 -2px;
+    text-align: center;
+}
