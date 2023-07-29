@@ -19,8 +19,8 @@ class Migration(migrations.Migration):
                 ('description', models.TextField(verbose_name='Описание')),
                 ('price', models.DecimalField(decimal_places=2, max_digits=10, verbose_name='Цена')),
                 ('auction', models.BooleanField(help_text='Отметьте, если торг уместен.', verbose_name='Торг')),
-                ('created_ad', models.DateTimeField(auto_now_add=True)),
-                ('updated_ap', models.DateTimeField(auto_now=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
             ],
         ),
     ]

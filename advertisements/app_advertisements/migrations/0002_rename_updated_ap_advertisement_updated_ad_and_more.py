@@ -12,8 +12,8 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RenameField(
             model_name='advertisement',
-            old_name='updated_ap',
-            new_name='updated_ad',
+            old_name='updated_at',
+            new_name='updated_at',
         ),
         migrations.AlterModelTable(
             name='advertisement',
