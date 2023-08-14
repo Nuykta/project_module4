@@ -5,7 +5,7 @@ from django.db.models.query import QuerySet
 
 
 class AdvertisementsAdmin(admin.ModelAdmin):
-    list_display = ['id','title', 'description', 'price'] #столбцы для отображения в таблице
+    list_display = ['id','title', 'description', 'price', 'created_date'] #столбцы для отображения в таблице
     list_filter = [ 'auction', 'created_at', 'updated_at']
     actions = ['make_action_as_false']
     fieldsets =(
@@ -18,6 +18,7 @@ class AdvertisementsAdmin(admin.ModelAdmin):
             'fields':(
                 'price', 'auction'
             ),
+            'classes': ['collapse'] #скрыть/показать блок
         }),
     )
     @admin.action(description='Убрать возможность торга')
