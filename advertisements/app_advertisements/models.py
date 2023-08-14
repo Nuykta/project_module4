@@ -21,6 +21,18 @@ class Advertisements(models.Model):
                 created_time
             )
         return self.created_at.strftime('%d.%m.%H at %H:%M:%S')
+    
+    
+    @admin.display(description='дата обновления')
+    def updated_date(self):
+        if self.updated_at.date() == timezone.now().date():
+            updated_time = self.updated_at.time().strftime('%H:%M:%S')
+            return format_html(
+                "<span style='color:orange; font-weight: bold' >Сегодня в {}</span>",
+                updated_time
+            )
+        return self.updated_at.strftime('%d.%m.%H at %H:%M:%S')
+    
 
     class Meta:
         db_table = 'advertisements'
