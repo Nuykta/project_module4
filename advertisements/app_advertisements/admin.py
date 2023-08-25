@@ -5,7 +5,8 @@ from django.db.models.query import QuerySet
 
 
 class AdvertisementsAdmin(admin.ModelAdmin):
-    list_display = ['id','user', 'title', 'description', 'price', 'created_date', 'updated_date', 'image', 'image_display'] #столбцы для отображения в таблице
+    list_display = ['id','user', 'title', 'description', 'price',
+                    'created_date', 'updated_date', 'image', 'image_display'] #столбцы для отображения в таблице
     list_filter = [ 'auction', 'created_at', 'updated_at']
     actions = ['make_action_as_false']
     fieldsets =(
